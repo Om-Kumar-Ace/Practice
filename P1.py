@@ -7,3 +7,5 @@ print(word1 + ' ' + word2)
 registration_number = input("Enter the vehicle registration number: ")
 state_code = registration_number[:2]
 print(state_code)
+
+#Accept a five digit number as input and print the sum of its digits as output.s

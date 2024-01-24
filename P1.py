@@ -9,3 +9,9 @@ state_code = registration_number[:2]
 print(state_code)
 
 #Accept a five digit number as input and print the sum of its digits as output.s
+number = input("Enter a five-digit number: ")
+if len(number) != 5 or not number.isdigit():
+    print("Please enter a valid five-digit number.")
+else:
+    digit_sum = sum(int(digit) for digit in number)
+    print("Sum of digits:", digit_sum)

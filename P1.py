@@ -68,3 +68,15 @@ print(sentence)
 date = input(" ")
 year = date[-4:]  
 print(year)
+
+#Accept a sequence of five single digit numbers separated by commas as input. Print the product of all five numbers.
+numbers_string = input("Enter five single digit numbers separated by commas: ")
+numbers = [int(x) for x in numbers_string.split(",")]
+
+if len(numbers) != 5:
+  print("Error: You must enter exactly five numbers.")
+else:
+  product = 1
+  for number in numbers:
+    product *= number
+  print(f"Product of all numbers: {product}")

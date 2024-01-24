@@ -63,3 +63,8 @@ word5 = input("")
 
 sentence = f"{word1} {word2} {word3} {word4} {word5}."
 print(sentence)
+
+#Accept the date in DD-MM-YYYY format as input and print the year as output.
+date = input(" ")
+year = date[-4:]  
+print(year)

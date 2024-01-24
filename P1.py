@@ -27,3 +27,16 @@ for i in range(1, 5):
   for j in range(i, 0, -1):
     print(j, end=" ")
   print()
+
+
+#A simple algorithm has to be designed to find out whether a student belongs to the Data Science branch or not. The input will be a student's roll number, which is of the form BR18B0000. Here, BR represents the branch code, 1818 represents the year of joining, B represents the education level and 0000 0000 represents the specific identification given to the student of that batch. The branch code for Data Science is DS. Print True if the student belongs to Data Science branch and False otherwise.
+def is_data_science_student(roll_number):
+    branch_code = roll_number[:2]
+    return branch_code == "DS"
+roll_number = "BR18B0001"
+is_data_science = is_data_science_student(roll_number)
+
+if is_data_science:
+    print("True")
+else:
+    print("False")

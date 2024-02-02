@@ -21,3 +21,14 @@ else:
 
 #Accept a string as input and print the vowels present in the string in alphabetical order. If the string doesn't contain any vowels, then print the string none as output. Each vowel that appears in the input string — irrespective of its case — should appear just once in lower case in the output.
 
+input_string = input()
+
+vowels = {'a', 'e', 'i', 'o', 'u'}
+
+found_vowels = set(char.lower() for char in input_string if char.lower() in vowels)
+
+if found_vowels:
+    sorted_vowels = sorted(found_vowels)
+    print(''.join(sorted_vowels))
+else:
+    print('none')

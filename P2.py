@@ -35,3 +35,18 @@ else:
 
 #You are given the dates of birth of two persons, not necessarily from the same family. Your task is to find the younger of the two. If both of them share the same date of birth, then the younger of the two is assumed to be that person whose name comes first in alphabetical order (names will follow Python's capitalize case format).The input will have four lines. The first two lines correspond to the first person, while the last two lines correspond to the second person. For each person, the first line corresponds to the name and the second line corresponds to the date of birth in DD-MM-YYYY format. Your output should be the name of the younger of the two.
 
+name1 = input()
+dob1 = input()
+
+name2 = input()
+dob2 = input()
+
+day1, month1, year1 = map(int, dob1.split('-'))
+day2, month2, year2 = map(int, dob2.split('-'))
+
+if year1 < year2 or (year1 == year2 and month1 < month2) or (year1 == year2 and month1 == month2 and day1 < day2):
+    younger_person = name1
+else:
+    younger_person = name2
+
+print(younger_person)

@@ -5,3 +5,17 @@ if X > 0:
     print("positive")
 else:
     print("negative")
+
+#Accept three positive integers as input and check if they form the sides of a right triangle. Print YES if they form one, and NO if they do not. The input will have three lines, with one integer on each line. The output should be a single line containing one of these two strings: YES or NO.
+
+#DEBUG THE CODE: the template code has errors. Debug the code. 
+x = int(input())
+y = int(input())
+z = int(input())
+if ((x ** 2 + y ** 2 == z ** 2) and
+    (y ** 2 + z ** 2 == x ** 2) and
+    (z ** 2 + x ** 2 == y ** 2)):
+    print("YES")
+else:
+    print("NO")
+

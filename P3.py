@@ -65,3 +65,38 @@ for row in result_matrix:
 
 #[['rohit', 'sachin'], ['priya', 'sandeep'], ['priya', 'stella'], ['sandeep', 'stella']]
 
+ # Function to find pairs of names sharing a common date of birth
+def find_common_pairs(names, dates):
+    common = []
+    date_dict = {}
+
+    # Create a dictionary to store names with the same date of birth
+    for name, date in zip(names, dates):
+        if date not in date_dict:
+            date_dict[date] = [name]
+        else:
+            date_dict[date].append(name)
+
+    # Iterate through the dictionary and find pairs of names with the same date of birth
+    for date, name_list in date_dict.items():
+        if len(name_list) > 1:
+            name_list.sort()  # Sort names alphabetically
+            for i in range(len(name_list)):
+                for j in range(i + 1, len(name_list)):
+                    common.append([name_list[i], name_list[j]])
+
+    return common
+
+# Input sequences of names and dates
+names = input().split(',')
+dates = list(map(int, input().split(',')))
+
+# Find common pairs of names
+common = find_common_pairs(names, dates)
+
+# Sort the common pairs list
+common.sort()
+
+# Print the common pairs list
+for pair in common:
+    print(pair)

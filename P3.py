@@ -111,3 +111,25 @@ for pair in common:
 
 #You do not have to accept input from the console as it has already been provided to you. You do not have to print the output to the console. Input-Output is the responsibility of the autograder for this problem. Refer to PPA-11 if you are not sure how this works#
 
+def solution(marks):
+    ### Enter your solution below this line
+    ### Indent your entire code by one unit (4 spaces) to the right
+    
+    sorted_marks = marks[:]
+    for i in range(len(sorted_marks)):
+        for j in range(len(sorted_marks) - 1):
+            if sorted_marks[j] > sorted_marks[j + 1]:
+                sorted_marks[j], sorted_marks[j + 1] = sorted_marks[j + 1], sorted_marks[j]
+    
+    # Step 2: Find the median
+    n = len(sorted_marks)
+    if n % 2 == 0:
+        median = (sorted_marks[n // 2 - 1] + sorted_marks[n // 2]) / 2
+    else:
+        median = sorted_marks[n // 2]
+    
+    # Result
+    median_float = float(median)
+
+    ### Enter your solution above this line
+    return median

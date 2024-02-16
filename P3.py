@@ -11,4 +11,29 @@ else:
 
 
 #Accept two square matrices A and B of dimensions n×n as input and compute their product AB.The first line of the input will contain the integer n. This is followed by 2n lines. Out of these, each of the first n lines is a sequence of comma-separated integers that denotes one row of the matrix A. Each of the last n lines is a sequence of comma-separated integers that denotes one row of the matrix B.Your output should again be a sequence of n lines, where each line is a sequence of comma-separated integers that denotes a row of the matrix AB.
-    
+    n = int(input())
+
+# Accept matrix A
+matrix_A = []
+for _ in range(n):
+    row = list(map(int, input().split(',')))
+    matrix_A.append(row)
+
+# Accept matrix B
+matrix_B = []
+for _ in range(n):
+    row = list(map(int, input().split(',')))
+    matrix_B.append(row)
+
+# Initialize result matrix
+result_matrix = [[0 for _ in range(n)] for _ in range(n)]
+
+# Compute matrix multiplication
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+            result_matrix[i][j] += matrix_A[i][k] * matrix_B[k][j]
+
+# Print the result matrix
+for row in result_matrix:
+    print(','.join(map(str, row)))

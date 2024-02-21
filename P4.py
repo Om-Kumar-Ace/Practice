@@ -71,3 +71,17 @@ def distance(word1, word2):
 #Write a function named is_perfect that accepts a positive integer n as argument and returns True if it is perfect, and False otherwise.
 
 #You do not have to accept input from the user or print output to the console. You just have to write the function definition.
+def is_perfect(n):
+    if n <= 1:
+        return False
+    
+    sum_of_divisors = 0
+    
+    for i in range(1, n//2 + 1):
+        if n % i == 0:
+            sum_of_divisors += i
+    
+    if sum_of_divisors == n:
+        return True
+    else:
+        return False

@@ -125,3 +125,14 @@ def is_magic(matrix):
 #The transpose of a matrix swaps its rows and columns:
 #Write a function named transpose that accepts a matrix mat as input and returns its transpose.
 #You do not have to accept input from the user or print output to the console. You just have to write the function definition.
+
+def transpose(matrix):
+    num_rows = len(matrix)
+    num_cols = len(matrix[0]) if matrix else 0
+    transposed = [[0] * num_rows for _ in range(num_cols)]
+    
+    for i in range(num_rows):
+        for j in range(num_cols):
+            transposed[j][i] = matrix[i][j]
+    
+    return transposed

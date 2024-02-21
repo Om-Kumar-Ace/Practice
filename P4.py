@@ -101,3 +101,23 @@ def is_perfect(n):
 
 #(2) You do not have to accept input from the user or print output to the console. You just have to write the function definition.
     
+def is_magic(matrix):
+    n = len(matrix)
+    
+    expected_sum = sum(matrix[0])
+    
+    for row in matrix:
+        if sum(row) != expected_sum:
+            return "NO"
+    
+    for j in range(n):
+        column_sum = sum(matrix[i][j] for i in range(n))
+        if column_sum != expected_sum:
+            return "NO"
+    
+    diagonal_sum1 = sum(matrix[i][i] for i in range(n))
+    diagonal_sum2 = sum(matrix[i][n-i-1] for i in range(n))
+    if diagonal_sum1 != expected_sum or diagonal_sum2 != expected_sum:
+        return "NO"
+    
+    return "YES"

@@ -41,3 +41,33 @@ def get_range(numbers):
 
 #You do not have to accept input from the user or print output to the console. You just have to write the function definition
 
+def letter_distance(letter1, letter2):
+    letter1 = letter1.lower()
+    letter2 = letter2.lower()
+    
+    ascii_letter1 = ord(letter1)
+    ascii_letter2 = ord(letter2)
+    
+    distance = abs(ascii_letter1 - ascii_letter2)
+    
+    if distance > 25:
+        distance = 26 - (distance % 26)
+    
+    return distance
+
+def distance(word1, word2):
+    if len(word1) != len(word2):
+        return -1
+    
+    word_distance = 0
+    for char1, char2 in zip(word1, word2):
+        word_distance += letter_distance(char1, char2)
+    
+    return word_distance
+
+
+#A perfect number is a positive integer that is equal to the sum of all its divisors excluding itself. For example, 6 is a perfect number as  6=1+2+3.
+
+#Write a function named is_perfect that accepts a positive integer n as argument and returns True if it is perfect, and False otherwise.
+
+#You do not have to accept input from the user or print output to the console. You just have to write the function definition.

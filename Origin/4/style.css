@@ -1,13 +1,55 @@
-body{
-    background-color: grey;
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
 }
+body{
+    background-color : grey;
+}
+
 .card{
     background-color: white;
     width: 344px;
-    height: 544px;
+    height: 584px;
     border-radius: 2%;
+    margin: 5px ;
 }
 .img{
-    padding: 10px ;
+    padding: 10px ; 
+}
+
+.img img{
     border-radius: 2%;
+}
+
+.con{
+    font-size: small;
+    padding: 25px;
+    font-family: Comic Neue ;
+}
+.cap {
+    padding: 0 55px 0 75px ;
+    
+}
+.cap span {
+    border: 2px solid rgb(121, 120, 120);
+    border-radius: 8px ;
+    padding: 4px;
+    
+}
+.caps{
+     text-align: center;
+}
+.caps span {
+    border: 2px solid rgb(92, 183, 248);
+    border-radius: 25px ;
+    background-color: rgb(218, 255, 255);
+    color: rgb(84, 84, 224) ;
+    padding: 4px;
+    cursor: pointer;
+}
+.caps :hover{
+    color: rgb(218, 255, 255);
+    background-color: rgb(84, 84, 224) ;
 }

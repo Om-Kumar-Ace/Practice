@@ -1,3 +1,9 @@
 body{
     background-color: grey;
 }
+.card{
+    background-color: white;
+    width: 344px;
+    height: 444px;
+    border-radius: 2%;
+}

@@ -25,3 +25,12 @@ def get_toppers(scores_dataset, subject, gender):
             toppers.append(data['Name'])
     
     return toppers
+
+#Write a function named rotate that accepts a matrix mat as argument. It should return a matrix that is rotated by 90∘ in the clockwise direction. For example:
+
+#             d  a
+#a  b  c   → e  b
+#d  e  f      f  c  
+
+#You do not have to accept input from the user or print output to the console. You just have to write the function definition.
+

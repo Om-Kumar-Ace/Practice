@@ -34,3 +34,9 @@ def get_toppers(scores_dataset, subject, gender):
 
 #You do not have to accept input from the user or print output to the console. You just have to write the function definition.
 
+def rotate(mat):
+    transposed_mat = [[mat[j][i] for j in range(len(mat))] for i in range(len(mat[0]))]
+    
+    rotated_mat = [row[::-1] for row in transposed_mat]
+    
+    return rotated_mat

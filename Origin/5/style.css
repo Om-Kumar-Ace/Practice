@@ -1,5 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik';
+
+}
+:root{
+    --pcolor:rgb(233, 215, 250) ;
+    --scolor: pink ;
+
+}
 ul li{
     list-style: none;
     display: inline;
     padding: 24px;
+}
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+.nav{
+    background-color: var(--pcolor);
+    padding: 12px 0;
+    font-weight: 400;
+}
+body{
+    background-color: var(--scolor);
 }

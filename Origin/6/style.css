@@ -23,3 +23,12 @@ nav {
     border-color: beige;
 
 }
+.box1 {
+    background-color: cyan;
+    padding: 15px;
+    margin: 10px;
+    border: 2px;
+    border-color: beige;
+    float: left;
+
+}

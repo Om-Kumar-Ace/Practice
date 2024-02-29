@@ -1,0 +1,23 @@
+.logo{
+    height: 44px;
+    width: 24px;
+}
+.logo img {
+    height: 64px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    background-color:antiquewhite ;
+}
+.right ul li{
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+}
+.right ul {
+    display: flex;
+    gap: 25px;
+}

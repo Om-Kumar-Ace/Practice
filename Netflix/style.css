@@ -309,10 +309,12 @@ footer {
     max-width: 60vw;
     margin: auto;
     padding: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 footer .questions {
     padding: 34px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -320,6 +322,7 @@ footer .questions {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -400,4 +403,5 @@ footer .questions {
     display: flex;
     flex-direction: column;
     gap: 23px;
+    
 }

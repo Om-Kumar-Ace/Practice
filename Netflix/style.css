@@ -285,8 +285,8 @@ h3{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .faqe{
-    width: 80vw;
-    padding: 15px 500px;
+    margin-left: 25vw;
+    padding: 15px 20px;
 }
 .faqe input{
     padding: 9px 101px 5px 14px;

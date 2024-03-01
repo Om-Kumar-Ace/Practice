@@ -167,6 +167,31 @@ section.first>div :nth-child(2) {
 
 }
 
+
+.first-trd {
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+    color: white;
+    align-items: center;
+    font-family: "Poppins";
+}
+section.first-trd>div {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+}
+
+section.first-trd>div :nth-child(1) {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+
+section.first-trd>div :nth-child(2) {
+    font-size: 24px;
+}
 .first-fth {
     display: flex;
     justify-content: center;

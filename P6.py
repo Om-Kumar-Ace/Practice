@@ -12,3 +12,12 @@ print(fibo(1))  # Output: 1
 print(fibo(2))  # Output: 1
 print(fibo(6))  # Output: 8
 
+
+# Implement the following functions.
+
+# (1) Write a function named get_column that accepts a matrix named mat and a non-negative integer named col as arguments. It should return the column that is at index col in the matrix mat as a list. Zero-based indexing is used here.
+
+# (2) Write a function named get_row that accepts a matrix named mat and a non-negative integer named row as arguments. It should return the row that is at index row in the matrix mat as a list. Zero-based indexing is used here.
+
+# You do not have to accept input from the user or print output to the console. You just have to write the definition of both the functions. Each test case will correspond to one function call.
+

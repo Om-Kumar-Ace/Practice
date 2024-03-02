@@ -123,3 +123,14 @@ def busy_cities(scores_dataset):
     max_students = max(len(students) for students in cities.values())
     busy_cities = [city for city, students in cities.items() if len(students) >= max_students]
     return busy_cities
+
+# Accept a sequence of words as input. Create a dictionary named real_dict whose keys are the letters of the English alphabet. For each key (letter), the corresponding value should be a list of words that begin with this key (letter). For any given key, the words should be appended to the corresponding list in the order in which they appear in the sequence. You can assume that all words of the sequence will be in lower case.
+
+def create_dictionary(words):
+    real_dict = {chr(i): [] for i in range(ord('a'), ord('z')+1)}  
+    
+    for word in words:
+        if word[0] in real_dict:  
+            real_dict[word[0]].append(word)
+    
+    return real_dict

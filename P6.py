@@ -59,3 +59,15 @@ def insert(L, x):
     
     return sorted_list
 
+# Write the following functions:
+
+# (1) factors: accept a positive integer n as argument. Return the set of all factors of n.
+
+# (2) common_factors: accept two positive integers a and b as arguments. Return the set of common factors of the two numbers. This function must make use of factors.
+
+# (3) factors_upto: accept a positive integer n as argument. Return a dict D, whose keys are integers and values are sets. Each integer in the range [1,n], endpoints inclusive, is a key of D. The value corresponding to a key, is the set of all factors of key. This function must make use of factors.
+
+# The idea we are trying to bring out here is to make use of pre-defined functions whenever needed.
+
+# You do not have to accept input from the user or print output to the console. You just have to write the definition of all three functions. Each test case will correspond to one function call.
+

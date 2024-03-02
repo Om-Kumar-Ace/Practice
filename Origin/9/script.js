@@ -1,7 +1,8 @@
 let random = Math.random()
-let a = prompt("Enter 1st No.")
-let c = prompt("Enter Operation")
-let b = prompt("Enter 2nd No.")
+
+let a = prompt("Enter 1st No.");
+let c = prompt("Enter Operation");
+let b = prompt("Enter 2nd No.");
 
 let obj ={
     "+ ":" *",

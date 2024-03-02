@@ -70,4 +70,27 @@ def insert(L, x):
 # The idea we are trying to bring out here is to make use of pre-defined functions whenever needed.
 
 # You do not have to accept input from the user or print output to the console. You just have to write the definition of all three functions. Each test case will correspond to one function call.
+def factors(n):
+    if n <= 0:
+        return "Invalid input. Please provide a positive integer."
+    
+    factors_set = set()
+    for i in range(1, n + 1):
+        if n % i == 0:
+            factors_set.add(i)
+    
+    return factors_set
+
+def common_factors(a, b):
+    factors_a = factors(a)
+    factors_b = factors(b)
+    return factors_a.intersection(factors_b)
+
+def factors_upto(n):
+    factors_dict = {}
+    for i in range(1, n + 1):
+        factors_dict[i] = factors(i)
+    
+    return factors_dict
+    
 

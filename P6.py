@@ -44,4 +44,18 @@ def get_row(mat, row):
 # (1) The only built-in methods you are allowed to use are append and remove. You should not use any other method provided for lists.
 
 # (2) You do not have to accept input from the user or print output to the console. You just have to write the function definition.
+def insert(L, x):
+    sorted_list = L[:]  # Create a copy of the input list to avoid modifying it
+    
+    if not sorted_list:  # If the list is empty, simply append x
+        sorted_list.append(x)
+        return sorted_list
+    
+    index = 0
+    while index < len(sorted_list) and sorted_list[index] < x:
+        index += 1
+    
+    sorted_list.insert(index, x)
+    
+    return sorted_list
 

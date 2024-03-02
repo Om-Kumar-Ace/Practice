@@ -20,4 +20,23 @@ print(fibo(6))  # Output: 8
 # (2) Write a function named get_row that accepts a matrix named mat and a non-negative integer named row as arguments. It should return the row that is at index row in the matrix mat as a list. Zero-based indexing is used here.
 
 # You do not have to accept input from the user or print output to the console. You just have to write the definition of both the functions. Each test case will correspond to one function call.
+def get_column(mat, col):
+    if not mat or col < 0 or col >= len(mat[0]):
+        return "Invalid input. Please provide a valid matrix and column index."
+    
+    column = []
+    for row in mat:
+        if len(row) > col:
+            column.append(row[col])
+        else:
+            return "Invalid input. Matrix does not have enough columns."
+    
+    return column
+
+def get_row(mat, row):
+    if not mat or row < 0 or row >= len(mat):
+        return "Invalid input. Please provide a valid matrix and row index."
+    
+    return mat[row]
+
 

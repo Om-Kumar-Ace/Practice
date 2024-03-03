@@ -17,3 +17,5 @@ else{
     third ="Hub"
 
 }
+
+console.log(` ${first} ${seccond} ${third} `)

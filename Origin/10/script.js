@@ -5,7 +5,7 @@ if (rand <0.33) {
     second ="Engine"
     third ="Bros"
 }
-else if (rsnd <0.66 && rand >0.33) {
+else if (rand <0.66 && rand >0.33) {
     first ="Amazing"
     second ="Food"
     third ="Limited"
@@ -18,4 +18,4 @@ else{
 
 }
 
-console.log(` ${first} ${seccond} ${third} `)
+console.log(` ${first} ${second} ${third} `)

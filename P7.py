@@ -42,4 +42,23 @@ def merge(D1, D2, priority):
 
 # (2) You do not have to accept input from the user or print the output to the console.
 
+def minor_matrix(M, i, j):
+    n = len(M)
+
+    minor = []
+    for row_index in range(n):
+        if row_index == i:
+            continue
+
+        new_row = []
+
+        for col_index in range(n):
+            if col_index == j:
+                continue
+
+            new_row.append(M[row_index][col_index])
+
+        minor.append(new_row)
+
+    return minor
 

@@ -13,5 +13,20 @@
 # "first": retain the value corresponding to the common key present in the first dictionary
 # "second": retain the value corresponding to the common key present in the second dictionary
 
+def merge(D1, D2, priority):
+    merged_dict = {}
 
+    for key, value in D1.items():
+        merged_dict[key] = value
+
+    for key, value in D2.items():
+        if key in merged_dict:
+            if priority == "first":
+                continue
+            elif priority == "second":
+                merged_dict[key] = value
+        else:
+            merged_dict[key] = value
+
+    return merged_dict
 

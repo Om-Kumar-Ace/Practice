@@ -30,3 +30,16 @@ def merge(D1, D2, priority):
 
     return merged_dict
 
+# Given a square matrix M and two indices (i,j), M ijis the matrix obtained by removing the ℎith row and the ℎjth column of M.
+
+# Write a function named minor_matrix that accepts three arguments:
+
+# M: a square matrix
+# i: a non-negative integer
+# j: a non-negative integer
+# The function should return the matrix M ij after removing the ith row and the j th  column of M. Note that we use zero-based indexing throughout. That is, if the matrix M is of dimensions nxn, then we have 0≤i,j≤ n - 1.
+# (1) You can assume that the number of rows in M will be at least 3 in each test case.
+
+# (2) You do not have to accept input from the user or print the output to the console.
+
+

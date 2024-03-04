@@ -84,3 +84,17 @@ def minor_matrix(M, i, j):
 # (1) The values of the compartments should be represented as integers and not as strings.
 # (2) You do not have to print the output to the console. Do not try to print the output that you observe in the "Expected Output". You just have to process the input and create the dictionary station_dict.
 
+station_dict = {}
+
+n = int(input())
+
+for _ in range(n):
+    train_name = input().strip()
+    m = int(input())
+    train_compartments = {}
+
+    for _ in range(m):
+        compartment, passengers = input().strip().split(',')
+        passengers = int(passengers)
+        train_compartments[compartment] = passengers
+    station_dict[train_name] = train_compartments

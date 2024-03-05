@@ -4,6 +4,6 @@
 int main(){
     int a = 4 ,b = 5,multi;
     multi = a*b;
-    printf("The sum is %d",multi);
+    printf("The product is %d",multi);
     return 0;
 }

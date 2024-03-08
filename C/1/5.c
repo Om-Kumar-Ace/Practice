@@ -4,22 +4,26 @@
 
 int main(){
     float a,b;
-    printf("Enter the no. ");
+    printf(" Enter the no. ");
     scanf("%f",&a );
-    printf(" \n Enter the no. ");
+    printf("\n Enter the no. ");
     scanf("%f",&b);
+    
     float sum ;
-    sum = a+b;
-    printf("The sum of two no %d", sum );
+    sum = a + b;
+    printf("\n The sum of two no %f", sum );
+
     float sub ;
-    sub = a-b;
-    printf("The sum of two no %d", sub );
+    sub = a - b;
+    printf("\n The sub of two no %f", sub );
+
     float multi ;
-    multi = a*b;
-    printf("The sum of two no %d", multi );
+    multi = a * b;
+    printf("\n The multi of two no %f", multi );
+
     float div ;
-    div = a/b;
-    printf("The sum of two no %d", div );
+    div = a / b;
+    printf("\n The div of two no %d", div );
 
     return 0;
 }

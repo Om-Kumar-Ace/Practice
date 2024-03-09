@@ -23,7 +23,7 @@ int main(){
 
     float div ;
     div = a / b;
-    printf("\n The div of two no %d", div );
+    printf("\n The div of two no %f", div );
 
     return 0;
 }

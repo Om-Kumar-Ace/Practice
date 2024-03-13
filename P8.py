@@ -14,6 +14,13 @@ def reverse(L):
 
 # P and Q are of same length.P[i]=k⋅Q[i], for every integer i in the range [0,len(P)−1], endpoints inclusive
     
-
+def linear(P, Q, k):
+    if len(P) != len(Q):
+        return False
+    
+    if len(P) == 0:
+        return True
+    
+    return P[0] == k * Q[0] and linear(P[1:], Q[1:], k)
 
 

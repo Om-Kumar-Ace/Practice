@@ -47,3 +47,10 @@ def linear(P, Q, k):
 
 # You do not have to accept input from the user or print output to the console. You just have to write the function definition.
 
+def collatz(n):
+    if n == 1:
+        return 0
+    elif n % 2 == 0:
+        return 1 + collatz(n // 2)
+    else:
+        return 1 + collatz(3 * n + 1)

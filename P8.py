@@ -102,3 +102,9 @@ def steps(n):
 # (3) You do not have to accept input from the user or print output to the console. You just have to write the function definition.
     
 
+def ancestry(P, present, past):
+    if present == past:
+        return [present]
+    else:
+        father = P[present]
+        return [present] + ancestry(P, father, past)

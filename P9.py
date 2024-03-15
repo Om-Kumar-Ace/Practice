@@ -16,3 +16,13 @@
 
 # (2) You do not have to accept input from the console or print the output to the console. You just have to write the function definition.
 
+def get_freq(filename):
+    word_freq = {}
+    with open(filename, 'r') as file:
+        for line in file:
+            word = line.strip()
+            if word in word_freq:
+                word_freq[word] += 1
+            else:
+                word_freq[word] = 1
+    return word_freq

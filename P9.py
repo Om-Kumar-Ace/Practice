@@ -74,3 +74,10 @@ def uniq(L):
 
 # You do not have to accept input from the user or print the output to the console. You just have to write the function definition.
     
+def uniq(L):
+    if len(L) == 1:
+        return L
+    if L[0] in L[1:]:
+        return uniq(L[1:])
+    else:
+        return [L[0]] + uniq(L[1:])

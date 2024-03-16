@@ -26,3 +26,7 @@ def get_freq(filename):
             else:
                 word_freq[word] = 1
     return word_freq
+
+# Consider a spiral of semicircles. We start at a point 0 P 0 on the x-axis with coordinates (l,0). The first arm of the spiral ends at with coordinates (r,0). The second arm of the spiral starts at and ends at the center of the first arm,  The third arm starts from and ends at which happens to be the center of the second arm. And finally, the fourth arm starts at 
+# and ends at  the center of the third arm.Write two functions named spiral_iterative and spiral_recursive, each of which accepts three arguments:
+# left: x-coordinate of the point 0 P 0 right: x-coordinate of the point 1P1n: the number of arms in the spiralBoth functions should return the the x-coordinate of Pn, the point at which the nth arm of the spiral ends. You do not have to accept input from the user or print the output to the console. You just have to write the function definition.

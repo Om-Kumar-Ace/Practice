@@ -92,4 +92,14 @@ def uniq(L):
 
 # You do not have to accept input from the user or print output to the console. You just have to write the function definition.
     
+def search(L, k):
+    if not L:
+        return False
+    mid = len(L) // 2
+    if L[mid] == k:
+        return True
+    elif k < L[mid]:
+        return search(L[:mid], k)
+    else:
+        return search(L[mid + 1:], k)
 

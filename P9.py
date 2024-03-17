@@ -160,3 +160,25 @@ def get_goals(filename, country):
 
 # (2) The last line of the file should not end with a '\n'. The last character of every other line in the file should end with a '\n'. This is a convention that we will be following in all questions that ask you to write to a file.
 
+import csv
+
+def num_to_words(matrix):
+    digit_to_word = {
+        0: 'zero',
+        1: 'one',
+        2: 'two',
+        3: 'three',
+        4: 'four',
+        5: 'five',
+        6: 'six',
+        7: 'seven',
+        8: 'eight',
+        9: 'nine'
+    }
+    
+    with open('words.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        
+        for row in matrix:
+            word_row = [digit_to_word[num] for num in row]
+            writer.writerow(word_row)

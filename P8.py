@@ -137,3 +137,19 @@ def non_decreasing(L):
 
 # (3) The strings '9876543210' and '9876543210\n' are not the same, though the phone numbers are the same. So, strip the strings of all new lines using the strip method before checking for equality of two lines across the files.
 
+def relation(file1, file2):
+    with open(file1, 'r') as f1:
+        lines1 = f1.readlines()
+
+    with open(file2, 'r') as f2:
+        lines2 = f2.readlines()
+
+    lines1_stripped = [line.strip() for line in lines1]
+    lines2_stripped = [line.strip() for line in lines2]
+
+    if lines1_stripped == lines2_stripped[:len(lines1_stripped)]:
+        return "Subset"
+    elif lines1_stripped == lines2_stripped:
+        return "Equal"
+    else:
+        return "No Relation"

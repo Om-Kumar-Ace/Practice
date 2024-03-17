@@ -121,3 +121,27 @@ def search(L, k):
 
 # (3) You do not have to accept input from the user or print the output to the console. You just have to write the function definition.
     
+import csv
+
+def get_goals(filename, country):
+    num_players = 0
+    num_goals = 0
+    
+    with open(filename, 'r') as file:
+        reader = csv.reader(file)
+        header = next(reader)
+        
+        if 'Country' not in header:
+            return (-1, -1)
+        
+        country_index = header.index('Country')
+        
+        for row in reader:
+            if row[country_index] == country:
+                num_players += 1
+                num_goals += int(row[-1])
+        
+        if num_players == 0:
+            return (-1, -1)
+        
+        return (num_players, num_goals)

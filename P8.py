@@ -114,3 +114,7 @@ def ancestry(P, present, past):
 
 # You do not have to accept input from the user or print the output to the console. You just have to write the function definitio
     
+def non_decreasing(L):
+    if len(L) <= 1:
+        return True
+    return L[0] <= L[1] and non_decreasing(L[1:])

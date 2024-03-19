@@ -4,20 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Card</title>
     <style>
         .card {
+            font-family: system-ui;
+            font-size: small;
             display: flex;
             margin: 5px;
-            border: 2px solid black;
+            border: 2px solid #242020;
+            border-radius: 10px;
             width: 900px;
             justify-content: center;
             align-items: center;
-            padding: 12px;
+            padding: 9px;
+            background-color: #242020;
+            color: white;
         }
 
         .image img {
             width: 200px;
+            border-radius: 8px;
         }
 
         .text h1,
@@ -27,21 +33,23 @@
 
         .image {
             position: relative;
+            padding-right: 24px;
         }
 
         .image .capsule {
             position: absolute;
-            bottom: 4px;
+            bottom: 9px;
             z-index: 10;
-            right: 5px;
+            right: 32px;
             background: #242020;
             opacity: 0.9;
             color: white;
             padding: 3px;
-            border-radius: 3px;
+            border-radius: 7px;
             font-size: 14px;
         }
     </style>
+
 </head>
 
 <body>
@@ -54,7 +62,7 @@
             </div>
             <div class="text">
                 <h1>Introduction to Backend | Sigma Web Dev video #2</h1>
-                <p>CodeWithHarry . 727K views . 2 months ago</p>
+                <p>Sigma . 727K views . 2 months ago</p>
             </div>
         </div>
     </div>

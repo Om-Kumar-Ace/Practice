@@ -19,3 +19,28 @@
 
 # (2) You do not have to accept input from the user or print output to the console. You just have to define the class based on the specifications given in the question.
 
+class Calculator:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def add(self):
+        return self.a + self.b
+
+    def multiply(self):
+        return self.a * self.b
+
+    def subtract(self):
+        return self.a - self.b
+
+    def quotient(self):
+        if self.b != 0:
+            return self.a / self.b
+        else:
+            return "Cannot divide by zero."
+
+    def remainder(self):
+        if self.b != 0:
+            return self.a % self.b
+        else:
+            return "Cannot divide by zero."

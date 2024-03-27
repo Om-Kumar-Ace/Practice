@@ -68,3 +68,24 @@ class Calculator:
 
 # (3) You do not have to accept input from the user or print output to the console. You just have to define the class based on the specifications given in the question.
 
+class StringManipulation:
+    def __init__(self, words):
+        self.words = words
+
+    def total_words(self):
+        return len(self.words)
+
+    def count(self, some_word):
+        return self.words.count(some_word)
+
+    def words_of_length(self, length):
+        return [word for word in self.words if len(word) == length]
+
+    def words_start_with(self, char):
+        return [word for word in self.words if word.startswith(char)]
+
+    def longest_word(self):
+        return max(self.words, key=len)
+
+    def palindromes(self):
+        return [word for word in self.words if word == word[::-1]]

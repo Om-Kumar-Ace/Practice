@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(19, 19, 19); 
+    color: white;
+}
+.left{
+    width: 25vw;
+    background-color: rgba(39, 39, 39, 0.903);
+    border-radius: 7px;
+}
+.right{
+    width: 75vw;
+    background-color: rgba(39, 39, 39, 0.903);
+    border-radius: 7px;
+}

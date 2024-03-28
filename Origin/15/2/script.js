@@ -10,5 +10,5 @@ if(note){
 document.querySelector("button").addEventListener("click", () => {
     let note = prompt("Enter your note")
     saveNoteToLocalStorage(note)
-    document.querySelector(".note").innerHTML = "\n"+note
+    document.querySelector(".note").innerHTML = note
 })

@@ -89,3 +89,6 @@ class StringManipulation:
 
     def palindromes(self):
         return [word for word in self.words if word == word[::-1]]
+    
+
+    

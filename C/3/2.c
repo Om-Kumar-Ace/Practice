@@ -9,7 +9,7 @@ int main(){
     printf("Please Enter value in 0 1 2 3 4 6 ");
     for ( o; o < 2; o++)
     {
-        printf("Enter run ");
+        printf("\n Enter run ");
         scanf("%d",&a);
         scanf("%d",&b);
         scanf("%d",&c);

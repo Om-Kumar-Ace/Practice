@@ -1,14 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
     background-color: rgb(19, 19, 19); 
     color: white;
 }
+
 .left{
     width: 25vw;
+}
+.home{
     background-color: rgba(39, 39, 39, 0.903);
     border-radius: 7px;
+    margin: 4px;
+    padding: 24px;
+}
+.library{
+    background-color: rgba(39, 39, 39, 0.903);
+    border-radius: 7px;
+    margin: 4px;
+    padding: 24px;
+    
 }
 .right{
     width: 75vw;
     background-color: rgba(39, 39, 39, 0.903);
     border-radius: 7px;
+}
+.logo{
+    margin: 2px;
+    padding: 6px;
+}
+
+.home ul li{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    width: 24px;
+    font-family: cursive;
+    padding: 6px;
 }

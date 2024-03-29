@@ -85,7 +85,8 @@ body{
     margin-top: 11px;
     margin-bottom: 9px;
     margin-right: 10px;
-
+    position: relative;
+    
 }
 .playlist{
     padding: 6px;
@@ -177,4 +178,19 @@ body{
 .Sign_btn:hover{
     font-size: 19px;
     color: white;
+}
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(6, 6, 6, 0.892);
+    width: 100%;
+    padding: 12px;
+}
+.sbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:12px;
+
 }

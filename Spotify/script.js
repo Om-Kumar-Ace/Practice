@@ -1,3 +1,5 @@
+let currentsong = new Audio();
+
 async function getSongs () {
     let a = await fetch("http://127.0.0.1:5500/Spotify/song/")
     let response = await a.text();
@@ -16,9 +18,21 @@ async function getSongs () {
     }
     return songs
 }
+
+const playMusic = (tarck)=>{
+
+    currentsong.src ="/Spotify/song/" + tarck
+    currentsong.play()
+    play.src = "pause.svg"
+    document.querySelector(".sinfo").innerHTML = tarck
+    document.querySelector(".stime").innerHTML = "00:00/00:00"
+}
+
 async function main() {
+    
+
     let songs = await getSongs()
-    console.log(songs);
+
 
     let songul = document.querySelector(".songlist").getElementsByTagName("ul")[0]
     for (const song of songs) {
@@ -35,13 +49,25 @@ async function main() {
       </li> `;
     }
 
-    // var audio = new Audio(songs[0]);
-    // audio.play();
-    // audio.addEventListener("loadeddata", () =>{
-    //     let duration= audio.duration
-    //     console.log(duration)
-    // })
-    
+    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e=>{
+        e.addEventListener("click" ,element =>{
+        console.log(e.querySelector(".info").firstElementChild.innerHTML)
+        playMusic(e.querySelector(".info").firstElementChild.innerHTML)
+        })
+    })
+    play.addEventListener("click", ()=>{
+        if (currentsong.paused) {
+            currentsong.play()
+            play.src ="pause.svg"
+        } 
+        else{
+            currentsong.pause()
+            play.src ="play.svg"
+        }
+            
+    })
+
+    return songs
 }
 
 main()

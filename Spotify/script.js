@@ -35,12 +35,13 @@ async function main() {
       </li> `;
     }
 
-    var audio = new Audio(songs[0]);
-    audio.play();
-    audio.addEventListener("loadeddata", () =>{
-        let duration= audio.duration
-        console.log(duration)
-    })
+    // var audio = new Audio(songs[0]);
+    // audio.play();
+    // audio.addEventListener("loadeddata", () =>{
+    //     let duration= audio.duration
+    //     console.log(duration)
+    // })
+    
 }
 
 main()

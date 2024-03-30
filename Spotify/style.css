@@ -182,10 +182,11 @@ body{
 
 .playbar{
     position: fixed;
-    bottom: 10px;
+    bottom: 15px;
     background-color: rgba(0, 0, 0, 0.899);
     width: 70vw;
     padding: 12px;
+    border-radius: 7px;
 }
 .sbutton{
     display: flex;
@@ -229,4 +230,23 @@ body{
     width: 64px;
     padding: 8px ;
 
+}
+.seekbar{
+    height: 2px;
+    width: 70vw;
+    position: absolute;
+    background-color: white;
+    border-radius:8px ;
+    bottom : 5px;
+}
+.circle{
+    height: 12px;
+    width: 12px;
+    position: relative;
+    border: 2px solid white;
+    background-color: white;
+    border-radius:100px ;
+    bottom : 8px ;
+    left: 0%;
+    transition: left 0.5s;
 }

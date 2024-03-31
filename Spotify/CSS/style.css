@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root{
+    --a:0;
+    --b:200px;
+}
 
 *{
     margin: 0px;
@@ -127,7 +131,7 @@ body{
     text-overflow: ellipsis;
 
 }
-.cardcontainer{
+.cardContainer{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -135,14 +139,22 @@ body{
     overflow-y: auto;
     max-height: 65vh;
 }
+
+.cardContainer :hover{
+    background-color: rgba(0, 0, 0, 0.555);
+    cursor: pointer;
+    transition: all 0.5s;
+    --a:1;
+    --b:130px;
+}
 .play{
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 130px;
-    right: -6px;
-    opacity: 0;
+    top: var(--b);
+    right: 10px;
+    opacity: var(--a);
     transition: all 1s ease-out;
 }
 .log_btn{
@@ -196,17 +208,17 @@ body{
     gap:12px;
 
 }
-.songlist{
+.songList{
     height: 55vh;
     overflow: auto;
     margin-bottom: 34px ;
 }
-.songlist ul{
+.songList ul{
     padding: 0 12px;
     font-family: Roboto;
 }
 
-.songlist ul li{
+.songList ul li{
     list-style-type: decimal;
     display: flex;
     gap :12px;
@@ -217,7 +229,7 @@ body{
     border-radius: 4px;
     justify-content: space-between;
 }
-.songlist .info{
+.songList .info{
     font-size: 12px;
     width: 340px;
 }
@@ -282,13 +294,16 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
-.vol{
+.volume{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
 }
-
+.range{
+    cursor: pointer;
+}
 .left .close{
     display: none;
     align-items: center;
@@ -323,6 +338,8 @@ body{
     }
     .hamburger{
         display: block;
+        cursor: pointer;
+        z-index: 1;
     }
     .log_btn{
         padding: 4px;

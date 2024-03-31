@@ -1,5 +1,7 @@
 let currentsong = new Audio();
 
+let songs
+
 function convertSecToMinAndSec(seconds) {
     if (isNaN(seconds) || seconds < 0) {
         return "00:00";
@@ -48,7 +50,7 @@ const playMusic = (tarck , pause=false)=>{
 async function main() {
     
 
-    let songs = await getSongs()
+    songs = await getSongs()
     playMusic(songs[0] ,true)
 
     let songul = document.querySelector(".songlist").getElementsByTagName("ul")[0]
@@ -99,6 +101,29 @@ async function main() {
     })
     document.querySelector(".close").addEventListener("click",()=>{
         document.querySelector(".left").style.left = "-120%"
+    })
+    prev.addEventListener("click",()=>{
+        console.log("Previous clicked")
+        let index = songs.indexOf(currentsong.src.split("/").slice(-1)[0])
+        if (index-1 >=0) {
+            
+            playMusic(songs[index-1])
+        }
+    })
+    next.addEventListener("click",()=>{
+        console.log("Next clicked")
+        let index = songs.indexOf(currentsong.src.split("/").slice(-1)[0])
+        if (index+1 < songs.length) {
+            
+            playMusic(songs[index+1])
+        }
+    })
+    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e) => {
+        console.log("Setting volume to", e.target.value, "/ 100")
+        currentSong.volume = parseInt(e.target.value) / 100
+        if (currentSong.volume >0){
+            document.querySelector(".volume>img").src = document.querySelector(".volume>img").src.replace("mute.svg", "volume.svg")
+        }
     })
     return songs
 }

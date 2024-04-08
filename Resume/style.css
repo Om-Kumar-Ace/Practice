@@ -8,7 +8,7 @@
     transition: 0.3s;
 }
 *::selection{
-    background-color: #ffaa17;
+    background-color: #9a17ff;
     color: #fff;
 }
 
@@ -28,12 +28,12 @@ nav{
     padding: 15px 30px;
     color: #1c1e22;
     font-weight: 500;
-    background-color: #ffaa17;
+    background-color: #6d08c6;
     border-radius: 10px;
-    border: 1px solid #ffaa17;
+    border: 1px solid #6d08c6;
 }
 .btn:hover{
-    color: #ffaa17;
+    color: #6d08c6;
     background: #fff;
 }
 
@@ -50,7 +50,7 @@ section{
     font-size: 40px;
 }
 .sec-top h1 span{
-    color: #ffaa17;
+    color: #6d08c6;
 }
 
 .boxs{
@@ -88,7 +88,7 @@ header nav .nav-links a{
 }
 header nav .nav-links a:hover,
 header nav .nav-links a.active{
-    color: #ffaa17;
+    color: #6d08c6;
 }
 
 #btn-menu{
@@ -111,7 +111,7 @@ header nav .nav-links a.active{
     align-items: center;
 }
 .hero .content h4{
-    color: #ffaa17;
+    color: #6d08c6;
     font-size: 30px;
 }
 .hero .content h1{
@@ -121,7 +121,7 @@ header nav .nav-links a.active{
 }
 
 .hero .content p{
-    color: #e4e4e4;
+    color: #000000;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 70px;
@@ -175,7 +175,7 @@ box-shadow: 0 0 20px #0ef;
     font-size: 45px;
 }
 .about .content h1 span{
-    color: #ffaa17;
+    color: #6d08c6;
 }
 .about .content h3{
     color: #1c1e22;
@@ -207,7 +207,7 @@ box-shadow: 0 0 20px #0ef;
     top: -25px;
 }
 .education.boxs .box i{
-    color: #ffaa17;
+    color: #6d08c6;
     font-size: 50px;
     margin-bottom: 20px;
 }
@@ -287,7 +287,7 @@ box-shadow: 0 0 20px #0ef;
 }
 .contact form textarea:focus,
 .contact form input:focus{
-    border-color: #ffaa17;
+    border-color: #6d08c6;
 }
 .contact form button{
     margin: 40px auto 0;
@@ -404,7 +404,7 @@ box-shadow: 0 0 20px #0ef;
     }
     header nav .nav-links a.active,
     header nav .nav-links a:hover{
-        background-color: #ffaa17;
+        background-color: #6d08c6;
         color: #1c1e22;
     }
 }

@@ -111,11 +111,11 @@ header nav .nav-links a.active{
     align-items: center;
 }
 .hero .content h4{
-    color: #6d08c6;
+    color: #000000;
     font-size: 30px;
 }
 .hero .content h1{
-    color: #fff;
+    color: #6d08c6;
     font-size: 65px;
     margin: 20px 0 10px;
 }

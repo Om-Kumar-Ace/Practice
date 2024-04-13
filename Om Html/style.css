@@ -1,0 +1,70 @@
+*{
+    margin: 1px;
+    padding: 0px;
+}
+
+nav{
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    font-family: cursive;
+    font-size: larger;
+    cursor: pointer;
+}
+.navbar ul li{
+    padding: 7px;
+}
+.cat{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 8px;
+    padding-bottom: 15px;
+}
+.case{
+    display: flex;
+    padding: 15px;
+    height: 200px;
+    width: 90px;
+    font-size: large;
+    font-family: cursive;
+}
+.rec{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 8px;
+}
+.ell{
+    padding: 22px;
+}
+.ell img{
+    border-radius: 150px;
+    
+}
+.banner{
+    padding-left: 4px;
+    size: 1.1rem;
+}
+.logo{
+    padding: 5px;
+    font-family: cursive;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fox{
+    padding: 22px;
+}
+h1{
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-bottom: 4px;
+}
+.hh{
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+}

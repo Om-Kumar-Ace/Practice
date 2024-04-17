@@ -1,0 +1,26 @@
+.card{
+
+  border: 2px solid black;
+  max-width: 22vw;
+
+}
+
+.container{
+  display: flex;
+  gap : 15px;
+  flex-wrap: wrap;
+}
+nav , ul{
+  display: flex;
+  gap: 14px;
+  padding: 12px 3px ;
+  background-color: antiquewhite;
+  
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+li{
+  list-style: none;
+}

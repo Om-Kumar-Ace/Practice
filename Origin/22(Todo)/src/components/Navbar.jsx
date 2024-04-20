@@ -5,7 +5,7 @@ const Navbar = () => {
         <>
             <nav className="flex justify-between bg-violet-500 text-white py-2" >
                 <div className="logo">
-                    <span className="font-bold text-xl mx-9" >iTask</span>
+                    <span className="font-bold text-xl mx-9" >iTodo</span>
                 </div>
                 <ul className="flex gap-4 mx-9">
                     <li className="cursor-pointer hover:font-bold transition-all ">Home</li>

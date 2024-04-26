@@ -4,7 +4,7 @@ int main(){
     float n,f=1;
     printf("Enetr the no :-");
     scanf("%f",&n);
-    for (int i = 0; i < n; i++)
+    for (int i = n; i > 1; i--)
     {
         f=f*i;
     }

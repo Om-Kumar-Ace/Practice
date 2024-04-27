@@ -8,7 +8,7 @@ int main(){
     {
         f=f*i;
     }
-    printf("Factorial : %f ",f);
+    printf("Factorial  Of %d : %f ",n ,f);
     
     return 0;
 }

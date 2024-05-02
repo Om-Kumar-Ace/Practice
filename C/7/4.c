@@ -1,9 +1,9 @@
 #include<stdio.h>
 
 int main(){
-    int a[40],b[12];
+    int a[40],b[12]={0};
     int x,y,z;
-    printf("Enter the nos :-");
+    printf("Enter the no. (range 0-11) :-");
     for (int i = 0; i < 40; i++)
     {
         scanf("%d",&a[i]);
@@ -15,11 +15,15 @@ int main(){
             }
             
         }
+        if (a[i]>11)
+        {
+            break;
+        }
         
     }
     for (int k = 0; k < 12; k++)
     {
-        printf("%d appers %d times",k,b[k]);
+        printf("%d appers %d times \n",k,b[k]);
     }
     
     

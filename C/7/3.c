@@ -2,10 +2,15 @@
 
 void main()
 {
-    int a[100], b[20] = {0}, n, z = 0, t = 0, p = 0;
+    int a[1000], b[20] = {0},n=1, m, z = 0, t = 0, p = 0;
     printf("Enter the number: ");
-    scanf("%d", &n);
+    scanf("%d", &m);
 
+    for (int h = m; h >0; h--)
+    {
+        n=n*h;
+    }
+    printf("Factorial : %d \n",n);
     for (int i = 1; i <= n; i++)
     {
         if (n % i == 0)

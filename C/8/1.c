@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-int main() {
+void main() {
     int arr[10] = {0};
     int n = 10; 
 
     printf("Enter array of 10 no. : \n");
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
         scanf("%d ", &arr[i]);
-    }
+    
     printf("Original array: \n");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
@@ -25,10 +25,9 @@ int main() {
     }
 
     printf("Sorted array: \n");
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
         printf("%d ", arr[i]);
-    }
+    
     printf("\n");
 
-    return 0;
 }

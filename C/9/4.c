@@ -8,10 +8,8 @@ int main() {
     printf("Enter size of array (max 100): ");
     scanf("%d", &size);
 
-    if (size >= 100) {
+    if (size >= 100) 
         printf("Error: Size exceeds maximum limit.");
-        return 1;
-    }
 
     printf("Enter elements of array:\n");
     for (i = 0; i < size; i++) {

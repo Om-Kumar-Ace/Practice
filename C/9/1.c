@@ -10,8 +10,7 @@ void main() {
 
     for (i = 0; str[i] != '\0'; i++) {
         if (str[i] == ' ') 
-            count++;
-        
+            count++;    
     }
     printf("Number of spaces in the string: %d\n", count);
 

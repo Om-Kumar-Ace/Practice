@@ -9,7 +9,6 @@ void main(){
 
     if (size >=100) {
         printf("Error: Size exceeds maximum limit.");
-        return 1;
     }
 
     printf("Enter elements of array:\n");

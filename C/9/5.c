@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+void main() {
     int arr[100];
     int size, i, num, pos;
 
@@ -35,6 +35,4 @@ int main() {
     printf("Array after insertion at position %d:\n", pos);
     for (i = 0; i < size; i++) 
         printf("%d ", arr[i]);
-    
-
 }

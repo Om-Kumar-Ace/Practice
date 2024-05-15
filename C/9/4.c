@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-
-int main() {
+void main() {
     int arr[100];
     int size, i, num;
 
@@ -12,9 +11,8 @@ int main() {
         printf("Error: Size exceeds maximum limit.");
 
     printf("Enter elements of array:\n");
-    for (i = 0; i < size; i++) {
+    for (i = 0; i < size; i++) 
         scanf("%d", &arr[i]);
-    }
 
     printf("Enter the number to insert at the end: ");
     scanf("%d", &num);
@@ -24,9 +22,8 @@ int main() {
     size++; 
 
     printf("Array after insertion at the end:\n");
-    for (i = 0; i < size; i++) {
+    for (i = 0; i < size; i++) 
         printf("%d ", arr[i]);
-    }
+    
 
-    return 0;
 }

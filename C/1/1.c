@@ -1,8 +1,14 @@
-// 1. Write a C program to display “This is my first C Program”. 
-
-#include<stdio.h>
-
-int main(){
-    printf("This is my first C Program");
+#include <stdio.h>
+int main()
+{
+     int i = 0;
+    int n;
+    printf("ENTER A NUMBER (n) : ");
+    scanf("%d", &n);
+    
+    do{
+        printf("THE NUMBER IS %d \n", i+1);
+        i++;
+    } while (i < n);
     return 0;
 }

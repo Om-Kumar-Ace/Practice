@@ -16,6 +16,18 @@ int main()
             scanf("%f", &a[i][j]);
         }
     }
+
+    printf("Orignal matrix : \n");
+
+    for (int i = 0; i < n ; i++)
+    {
+        for (int j = 0; j < n ; j++)
+        {
+            printf(" %f",a[i][j]);
+        } 
+        printf("\n");      
+    }
+
     for (int i = 0; i < n; i++)
     {
         if (a[i][i] == 0)

@@ -7,7 +7,6 @@ typedef struct {
 } person;
 
 int main() {
-
   person p1;
 
   strcpy(p1.name, "George Orwell");

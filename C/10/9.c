@@ -11,7 +11,7 @@ struct parent {
 };
 
 int main() {
-    
+   
     struct parent var1 = {24, {190, 'A'}};
 
     printf("var1.x : %d\n", var1.x);           

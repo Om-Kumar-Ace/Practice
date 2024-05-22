@@ -21,7 +21,7 @@ void main() {
         scanf("%f", &employees[i].salary);
     }
 
- 
+    printf("**************************** All Employee Details ****************************");
     for (int i = 0; i < n; i++) {
         printf("\nEmployee %d ID: %d\n", i + 1, employees[i].id);
         printf("Employee Name: %s\n", employees[i].name);

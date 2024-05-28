@@ -11,11 +11,10 @@ int main() {
     printf("Enter the second integer: ");
     scanf("%d", &y);
 
-    printf("\nBefore swapping (by value): x = %d, y = %d\n", x, y);
+    printf("\nBefore swapping: x = %d, y = %d\n", x, y);
     swapByValue(x, y);
     printf("After swapping (by value): x = %d, y = %d\n", x, y);
 
-    printf("\nBefore swapping (by reference): x = %d, y = %d\n", x, y);
     swapByReference(&x, &y);
     printf("After swapping (by reference): x = %d, y = %d\n", x, y);
 

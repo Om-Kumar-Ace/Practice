@@ -17,11 +17,11 @@ int main() {
     printf("Subtraction of %d from %d is: %d\n", b, a, subtract(a, b));
     printf("Multiplication of %d and %d is: %d\n", a, b, multiply(a, b));
     
-    if (b != 0) {
+    if (b != 0) 
         printf("Division of %d by %d is: %.2f\n", a, b, divide(a, b));
-    } else {
+    else 
         printf("Cannot divide by zero.\n");
-    }
+    
 
     return 0;
 }

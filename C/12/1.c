@@ -26,11 +26,10 @@ int main() {
     return 0;
   }
 
-  if (isPalindromeRecursive(str, 0, length - 1)) {
+  if (isPalindromeRecursive(str, 0, length - 1)) 
     printf("The string is a palindrome.\n");
-  } else {
+  else 
     printf("The string is not a palindrome.\n");
-  }
 
   return 0;
 }

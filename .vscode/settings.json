@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "6.C": "cpp"
+        "6.C": "cpp",
+        "ctype.h": "c"
     },
     "emmet.includeLanguages": {
         "ejs": "html",

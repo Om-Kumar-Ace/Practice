@@ -5,7 +5,6 @@ int main()
 {
     // for (int i = 0; i < 40; i++)
     // {
-    //     /* code */
     //     if(i==2){
     //         break;
     //     }
@@ -13,7 +12,6 @@ int main()
     // }
     for (int i = 0; i < 40; i++)
     {
-        /* code */
         if (i == 2)
         {
             continue;

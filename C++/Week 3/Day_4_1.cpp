@@ -3,24 +3,29 @@
 #include <vector>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int> &nums, int target)
+    {
         unordered_map<int, int> num_to_index;
 
-        for (int i = 0; i < nums.size(); ++i) {
+        for (int i = 0; i < nums.size(); ++i)
+        {
             int complement = target - nums[i];
-            if (num_to_index.find(complement) != num_to_index.end()) {
+            if (num_to_index.find(complement) != num_to_index.end())
+            {
                 return {num_to_index[complement], i};
             }
             num_to_index[nums[i]] = i;
         }
 
-        return {};  
+        return {};
     }
 };
 
-int main() {
+int main()
+{
     Solution solution;
 
     vector<int> nums1 = {2, 7, 11, 15};

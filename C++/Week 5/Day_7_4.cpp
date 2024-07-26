@@ -18,4 +18,5 @@
             if(arr[i]>max2)
             max2 = arr[i];
         }
+        
         return max2;

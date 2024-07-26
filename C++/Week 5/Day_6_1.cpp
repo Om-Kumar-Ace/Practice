@@ -20,6 +20,7 @@ public:
                 buff[i0]=A[right];
                 right++;
             }
+            
         }
         for(int i=start; i<start+s; i++) A[i]=buff[i];
     }

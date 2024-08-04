@@ -2,8 +2,6 @@
 using namespace std;
 
 
-// } Driver Code Ends
-
 class Solution {
   public:
     // Function to find the maximum number of meetings that can
@@ -30,7 +28,6 @@ class Solution {
 };
 
 
-//{ Driver Code Starts.
 int main() {
     int t;
     cin >> t;

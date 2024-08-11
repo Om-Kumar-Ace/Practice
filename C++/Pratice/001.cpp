@@ -24,27 +24,52 @@ class Solution
 {
     public:
     //Function to find the maximum profit and the number of jobs done.
-     vector<int> JobScheduling(Job arr[], int n) { 
-        // your code here
-        set<int> slots;
-        for(int i = 1; i <= n; i++)
-            slots.insert(i);
-        sort(arr, arr + n, [](Job& j1, Job&j2) {
-           return j1.profit > j2.profit; 
-        });
-        
-        int cnt = 0, profit = 0;
-        for(int i = 0; i < n; i++) {
-            Job curr = arr[i];
-            auto it = slots.upper_bound(curr.dead);
-            if(it == slots.begin()) continue;
-            it = prev(it);
-            cnt++;
-            profit += curr.profit;
-            slots.erase(it);
+
+    int findUncompleted(vector<bool>& don, int j, int n){
+        for(int i=j; i>n; i--){
+            if(don[i]==false)
+                return i;
         }
-        
-        return {cnt, profit};
+        return -1;
+    }
+    //Function to find the maximum profit and the number of jobs done.
+    vector<int> JobScheduling(Job arr[], int n) 
+    { 
+        // your code here
+        int mxdead = 0;
+        vector<pair<int, int>> vec;
+        for(int i=0; i<n; i++){
+            vec.push_back({arr[i].profit, arr[i].dead});
+            mxdead = max(mxdead, arr[i].dead);
+        }
+        sort(vec.begin(), vec.end(), greater<pair<int, int>>());
+        vector<bool>don(mxdead, false);
+        int count = 0, prof = 0;
+        int fillUntil = 0;
+        for(int i=0; i<n; i++){
+            int dad = vec[i].second;
+            int profi = vec[i].first;
+            if(!don[dad]){
+                don[dad] = true;
+                count++;
+                prof += profi;
+            }
+            else{
+                if(dad <= fillUntil){
+                    continue;
+                }
+                int done = findUncompleted(don, dad-1, fillUntil);
+                if(done!=-1){
+                    don[done] = true;
+                    count++;
+                    prof += profi;
+                }
+                else{
+                    fillUntil = max(fillUntil, dad);
+                }
+            }
+        }
+        return {count, prof};
     } 
 };
 
@@ -78,3 +103,4 @@ int main()
     }
 	return 0; 
 }
+

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="zip">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Origin/17/zip/zap.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Origin/17/zip/zag.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

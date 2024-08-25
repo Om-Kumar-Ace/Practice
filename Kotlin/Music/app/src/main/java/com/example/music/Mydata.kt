@@ -1,6 +1,6 @@
 package com.example.music
 
-data class Mydata(
+data class MyData(
     val `data`: List<Data>,
     val next: String,
     val total: Int

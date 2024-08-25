@@ -10,7 +10,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import com.example.music.Mydata
+
 
 
 class MainActivity : ComponentActivity() {
@@ -26,15 +26,15 @@ class MainActivity : ComponentActivity() {
 
         val retrofitData = retrofitBuilder.getData("eminem")
 
-        retrofitData.enqueue(object : Callback<Mydata> {
-            override fun onResponse(call: Call<Mydata>, response: Response<Mydata>) {
+        retrofitData.enqueue(object : Callback<MyData> {
+            override fun onResponse(call: Call<MyData>, response: Response<MyData>) {
                 val dataList= response.body()?.data
                 val textView=findViewById<TextView>(R.id.hellotext)
                 textView.text= dataList.toString()
                 Log.d("Tag:onResponse","onResponse: "+response.body())
             }
 
-            override fun onFailure(call: Call<Mydata>, t: Throwable) {
+            override fun onFailure(call: Call<MyData>, t: Throwable) {
                 Log.d("Tag:onFailure","onFailure: "+t.message)
             }
         })

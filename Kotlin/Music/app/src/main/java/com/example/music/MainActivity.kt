@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 import androidx.activity.ComponentActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -14,10 +16,12 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 class MainActivity : ComponentActivity() {
+    lateinit var myRecyclerView: RecyclerView
+    lateinit var myAdaptor: MyAdaptor
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        myRecyclerView=findViewById(R.id.recyclerView)
         val retrofitBuilder= Retrofit.Builder()
             .baseUrl("https://deezerdevs-deezer.p.rapidapi.com/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -28,9 +32,12 @@ class MainActivity : ComponentActivity() {
 
         retrofitData.enqueue(object : Callback<MyData> {
             override fun onResponse(call: Call<MyData>, response: Response<MyData>) {
-                val dataList= response.body()?.data
-                val textView=findViewById<TextView>(R.id.hellotext)
-                textView.text= dataList.toString()
+                val dataList= response.body()?.data!!
+//                val textView=findViewById<TextView>(R.id.hellotext)
+//                textView.text= dataList.toString()
+                myAdaptor= MyAdaptor(this@MainActivity,dataList)
+                myRecyclerView.adapter=myAdaptor
+                myRecyclerView.layoutManager=LinearLayoutManager(this@MainActivity)
                 Log.d("Tag:onResponse","onResponse: "+response.body())
             }
 

@@ -1,47 +1,43 @@
 package com.example.music
 
+import android.media.tv.TvContract.Channels.Logo
 import android.os.Bundle
+import android.util.Log
+import android.widget.TextView
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.music.ui.theme.MusicTheme
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import com.example.music.Mydata
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            MusicTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+        setContentView(R.layout.activity_main)
+
+        val retrofitBuilder= Retrofit.Builder()
+            .baseUrl("https://deezerdevs-deezer.p.rapidapi.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(ApiInterface::class.java)
+
+        val retrofitData = retrofitBuilder.getData("eminem")
+
+        retrofitData.enqueue(object : Callback<Mydata> {
+            override fun onResponse(call: Call<Mydata>, response: Response<Mydata>) {
+                val dataList= response.body()?.data
+                val textView=findViewById<TextView>(R.id.hellotext)
+                textView.text= dataList.toString()
+                Log.d("Tag:onResponse","onResponse: "+response.body())
             }
-        }
+
+            override fun onFailure(call: Call<Mydata>, t: Throwable) {
+                Log.d("Tag:onFailure","onFailure: "+t.message)
+            }
+        })
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MusicTheme {
-        Greeting("Android")
-    }
-}

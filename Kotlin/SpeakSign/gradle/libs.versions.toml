@@ -1,4 +1,5 @@
 [versions]
+activityKtx = "1.8.0"
 agp = "8.5.2"
 androidxCoreKtx = "1.9.0"
 cameraCamera2 = "1.1.0"
@@ -7,15 +8,23 @@ cameraCoreVersion = "1.2.0"
 cameraLifecycle = "1.1.0"
 converterGson = "2.9.0"
 coreKtxVersion = "1.10.1"
+firebaseMlVision = "24.0.3"
+firebaseStorage = "20.0.0"
+firebaseStorageKtx = "20.1.0"
 glide = "4.15.1"
+googleCloudSpeech = "1.24.0"
+googleCloudTexttospeech = "1.28.0"
 googleMaterialVersion = "1.8.0"
+googlePlayServicesMlkitTextRecognition = "16.0.0"
 handwriting = "1.0.0"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
+kotlinStdlib = "1.9.10"
 kotlinxCoroutinesAndroid = "1.7.3"
+languageIdVersion = "17.0.6"
 lifecycleRuntimeKtx = "2.8.4"
 activityCompose = "1.9.1"
 composeBom = "2024.04.01"
@@ -27,6 +36,7 @@ loggingInterceptor = "4.10.0"
 material = "1.12.0"
 activity = "1.9.1"
 constraintlayout = "2.1.4"
+objectDetection = "17.0.2"
 okhttp = "4.11.0"
 okhttpVersion = "4.10.0"
 opencvAndroid = "4.7.0"
@@ -34,9 +44,11 @@ retrofit = "2.9.0"
 tensorflowLite = "2.12.0"
 tensorflowLiteGpu = "2.12.0"
 tensorflowLiteSupport = "0.4.3"
+textRecognition = "16.0.0"
 
 [libraries]
 androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityCompose" }
+androidx-activity-ktx-v180 = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
 androidx-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraCoreVersion" }
 androidx-camera-camera2-v110 = { module = "androidx.camera:camera-camera2", version.ref = "cameraCamera2" }
 androidx-camera-core = { module = "androidx.camera:camera-core", version.ref = "cameraCoreVersion" }
@@ -51,8 +63,14 @@ androidx-core-ktx-v190 = { module = "androidx.core:core-ktx", version.ref = "and
 androidx-lifecycle-runtime-ktx-v262 = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtxVersion" }
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+firebase-ml-vision = { module = "com.google.firebase:firebase-ml-vision", version.ref = "firebaseMlVision" }
+firebase-storage = { module = "com.google.firebase:firebase-storage", version.ref = "firebaseStorage" }
+firebase-storage-ktx = { module = "com.google.firebase:firebase-storage-ktx", version.ref = "firebaseStorageKtx" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+google-cloud-speech = { module = "com.google.cloud:google-cloud-speech", version.ref = "googleCloudSpeech" }
+google-cloud-texttospeech = { module = "com.google.cloud:google-cloud-texttospeech", version.ref = "googleCloudTexttospeech" }
 google-material-v180 = { module = "com.google.android.material:material", version.ref = "googleMaterialVersion" }
+google-play-services-mlkit-text-recognition = { module = "com.google.android.gms:play-services-mlkit-text-recognition", version.ref = "googlePlayServicesMlkitTextRecognition" }
 handwriting = { module = "com.google.mlkit:handwriting", version.ref = "handwriting" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -69,11 +87,14 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlinStdlib" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+mlkit-language-id = { module = "com.google.mlkit:language-id", version.ref = "languageIdVersion" }
+object-detection = { module = "com.google.mlkit:object-detection", version.ref = "objectDetection" }
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 okhttp-v4100 = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVersion" }
 opencv-android = { module = "org.opencv:opencv-android", version.ref = "opencvAndroid" }
@@ -81,6 +102,7 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 tensorflow-lite = { module = "org.tensorflow:tensorflow-lite", version.ref = "tensorflowLite" }
 tensorflow-lite-gpu = { module = "org.tensorflow:tensorflow-lite-gpu", version.ref = "tensorflowLiteGpu" }
 tensorflow-lite-support = { module = "org.tensorflow:tensorflow-lite-support", version.ref = "tensorflowLiteSupport" }
+text-recognition = { module = "com.google.mlkit:text-recognition", version.ref = "textRecognition" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

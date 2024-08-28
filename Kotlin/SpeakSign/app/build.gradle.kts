@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+
     // Other plugins...
 }
 
@@ -11,8 +12,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.speaksign"
-        minSdk = 21
-        targetSdk = 33
+        minSdk = 24
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -52,26 +53,24 @@ android {
 }
 
 dependencies {
-    implementation (libs.handwriting) // Example for ML Kit
-    implementation (libs.androidx.camera.core.v110)
-    implementation (libs.androidx.camera.camera2.v110)
-    implementation (libs.androidx.camera.lifecycle.v110)
+    implementation (libs.firebase.storage)
+    implementation (libs.firebase.ml.vision)
+    implementation (libs.text.recognition)
+    // https://mvnrepository.com/artifact/com.google.mlkit/object-detection-custom
+    implementation("com.google.mlkit:object-detection-custom:16.2.0")
+
+    // ML Kit Language Identification
+    implementation (libs.mlkit.language.id)
+    implementation (libs.firebase.storage.ktx)
+    // AndroidX Activity KTX (latest version as of now)
+    implementation (libs.androidx.activity.ktx.v180)
+
+    // Kotlin Standard Library (latest version as of now)
+    implementation (libs.kotlin.stdlib)
     implementation(libs.glide)
-    implementation (libs.androidx.camera.core)
-    implementation (libs.androidx.camera.camera2)
-    implementation (libs.androidx.camera.lifecycle)
-    implementation (libs.androidx.camera.view)
-    implementation (libs.androidx.camera.extensions)
     annotationProcessor(libs.compiler)
     implementation(libs.okhttp.v4100)
     implementation(libs.logging.interceptor)
-    implementation (libs.tensorflow.lite)  // or the latest version
-
-    // TensorFlow Lite GPU Delegate for using GPU acceleration
-    implementation (libs.tensorflow.lite.gpu)  // or the latest version
-
-    // Optional: TensorFlow Lite Support Library (for ease of use with TensorFlow Lite)
-    implementation (libs.tensorflow.lite.support)
     // If using Kotlin Symbol Processing (KSP) instead of kapt:
     // ksp("com.github.bumptech.glide:compiler:4.15.1")
     implementation(libs.androidx.core.ktx.v1101)
@@ -101,7 +100,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
 }
 
 

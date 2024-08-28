@@ -7,15 +7,15 @@ plugins {
 
 android {
     // Menetapkan Namespace dan versi compile SDK
-    namespace = "com.example.tubesrpll"
+    namespace = "com.example.speak2sign"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.tubesrpll" // ApplicationID
+        applicationId = "com.example.speak2sign" // ApplicationID
         minSdk = 24 // Minimum SDK
         targetSdk = 34 // Target SDK version
         versionCode = 1 // versi aplikasi
-        versionName = "Silent Echo 1.0" // nama versi aplikasi
+        versionName = "1.0" // nama versi aplikasi
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -53,6 +53,7 @@ dependencies {
 
     //Dependency dan annotation processor Glide
     implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation(libs.firebase.database)
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
 
     //Dependency Firebas UI storage

@@ -4,6 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgrnd"
     tools:context=".view.TranslateVideoASLToText">
 
     <ImageView
@@ -14,7 +15,7 @@
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher_background" />
+        app:srcCompat="@mipmap/ic_launcher" />
 
     <TextureView
         android:id="@+id/textureView"

@@ -54,7 +54,10 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "ranges": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "forward_list": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp"
     },
     "emmet.includeLanguages": {
         "ejs": "html",
